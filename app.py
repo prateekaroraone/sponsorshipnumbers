@@ -24,7 +24,11 @@ FILE=Path("data/sponsorship_data.xlsx")
 
 @st.cache_data
 def load_sheet(path,sheet):
-    df=pd.read_excel(path,sheet_name=sheet)
+    df = pd.read_excel(
+    path,
+    sheet_name=sheet,
+    engine="openpyxl"
+)
     df.columns=[str(c).strip() for c in df.columns]
     df["Organisation Name"]=df["Organisation Name"].fillna("").astype(str).str.strip()
     return df[df["Organisation Name"]!=""][["Organisation Name",*YEARS]]
