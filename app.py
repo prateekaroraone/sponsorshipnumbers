@@ -8,10 +8,29 @@ st.markdown("""
 #MainMenu,footer,header{visibility:hidden}
 .block-container{max-width:900px;padding-top:2.2rem;padding-bottom:3rem}
 h1{letter-spacing:-.04em;margin-bottom:.25rem}
-div[data-testid="stRadio"]>div{gap:.5rem}
-div[data-testid="stRadio"] label{border:1px solid #d8dee8;border-radius:9px;padding:.55rem .85rem;background:#f8fafc;font-weight:500}
-div[data-testid="stRadio"] label:has(input:checked){background:#102a56;color:white;border-color:#102a56}
-div[data-testid="stTextInput"] input{border-radius:9px;min-height:3rem}
+
+div[data-testid="stRadio"] label {
+    background-color: #262626 !important;
+    color: #ffffff !important;
+    border: 1px solid #444444 !important;
+    border-radius: 8px !important;
+    padding: 0.55rem 0.85rem !important;
+}
+
+div[data-testid="stRadio"] label p {
+    color: #ffffff !important;
+}
+
+div[data-testid="stRadio"] label:has(input:checked) {
+    background-color: #173b70 !important;
+    color: #ffffff !important;
+    border-color: #173b70 !important;
+}
+
+div[data-testid="stRadio"] label:has(input:checked) p {
+    color: #ffffff !important;
+}
+
 .result-name{font-size:1.15rem;font-weight:650;margin:1rem 0 .5rem}
 </style>
 """,unsafe_allow_html=True)
